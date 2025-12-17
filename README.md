@@ -1,5 +1,5 @@
 # vs-replication
-Replication code for "Do Virtue Signals Signal Virtuez?"
+Replication code for "Do Virtue Signals Signal Virtue?"
 
 
 # Requirements
