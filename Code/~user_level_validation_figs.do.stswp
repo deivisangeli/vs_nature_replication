@@ -3,7 +3,7 @@ set scheme plotplainblind
 clear all
 
 
-local output *OUTPUT PATH*
+local output *OUTPU*
 cd *REPO PATH HERE*
 
 

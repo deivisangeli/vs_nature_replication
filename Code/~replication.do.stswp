@@ -1,17 +1,15 @@
 // Create main figures and tables for "Do Virtue Signals Signal Virtue?"
 
-
-//pause on
 pause off
-cd "C:/Users/deivi/github/vs_nature_replication"
+cd *REPO PATH HERE*
 
-global overleaf "$path_overleaf/VS Replication Copy"
-global figpath "$overleaf/Figures"
-global tabpath "$overleaf/Tables"
+
+global figpath *OUTPUT PATH FOR FIGURES*
+global tabpath *OUTPUT PATH FOR TABLES*
 
 // switches
 	// audit
-		local sumstats			        0 // table A1
+		local sumstats			        1 // table A1
 		local balance			        0 // table A3
 		local discrim			        0 // figs 3, 4, 5, A5
 		local intensive			        0 // fig A6 and A7
@@ -155,7 +153,7 @@ if `fec_bars'==1 { // Giving to Black vs. white candidates (or DEM vs. REP commi
 		local pDiD = "{it:p}<0.01"
 	}
 	else if r(p)>=0.995 {
-		local pDid = "{it:p}=1"
+		local pDiD = "{it:p}=1"
 	}	
 	else {
 		local pDiD = "{it:p}=0"+string(round(r(p),.01))
@@ -357,7 +355,7 @@ if `fec_bars'==1 { // Giving to Black vs. white candidates (or DEM vs. REP commi
 				   text(`meanlevel' 8 "`mean11'", size(3)) ///
 				   text(`meanlevel' 10 "`mean13'", size(3)) ///
 				   text(`meanlevel' 11 "`mean14'", size(3))
-			graph export "$figpath/`outcome'_`treatment'_bysigBN`samp'.`img'", replace	
+			graph export "$figpath/`outcome'_`treatment'_bysigBN.`img'", replace	
 		restore	
 	}
 	
@@ -1431,7 +1429,6 @@ if `predict_fig'==1 { // Plot student predictions against experimental results
 local lowPerc = 25
 local highPerc = 75
 
-// use Data/analysis/main_audit_analysis, clear
 use Data/audit_anon, clear
 
 g beta = .
@@ -1489,7 +1486,7 @@ save `betas'
 
 
 * Now get predictions
-use Data\grad_survey_answers_anon
+use Data\grad_survey_answers_anon, clear
 
 g beta=.
 g l95=.
@@ -3215,7 +3212,7 @@ local outcome = "accepted" // accepted / helpful / replied
 		local outtitle = "`outtitle'" + " in Accepting Meeting or Helpful (p.p)"
 	}
 	else if "`outcome_orig'"=="replied" {
-		local rangemax = 15"
+		local rangemax = 15
 		local outtitle = "`outtitle'" + " in Replying (p.p)"
 	}	
 	
