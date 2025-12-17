@@ -11,7 +11,7 @@ global tabpath "$overleaf/Tables"
 
 // switches
 	// audit
-		local sumstats			        1 // table A1
+		local sumstats			        0 // table A1
 		local balance			        0 // table A3
 		local discrim			        0 // figs 3, 4, 5, A5
 		local intensive			        0 // fig A6 and A7
