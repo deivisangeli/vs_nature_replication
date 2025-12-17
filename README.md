@@ -1,6 +1,4 @@
-# vs-replication
-Replication code for "Do Virtue Signals Signal Virtue?"
-
+# Replication code for "Do Virtue Signals Signal Virtue?"
 
 # Requirements
 Do-files were run in Stata 17. The following additional packages need to be installed:
