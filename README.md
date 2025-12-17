@@ -1,0 +1,14 @@
+# vs-replication
+replication code for "Do Virtue Signals Signal Virtue"
+
+
+# Requirements
+Do-files were run in Stata 17. The following additional packages need to be installed:
+- blindschemes
+- estout
+- coefplot
+- reghdfe
+- listtab
+- labutil
+- distinct
+- parmest
